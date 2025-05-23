@@ -1,0 +1,31 @@
+<?php
+/**
+ * @var Magento\Framework\Escaper $escaper
+ */
+?>
+<!--<div data-mage-init='{"customWidget2": {}}'></div>
+
+-->
+
+<form data-mage-init='{"validation": {}, "customWidget2": {}}'>
+    <fieldset class="fieldset">
+        <div class="field required">
+            <label for="country_id" class="label"><?= $escaper->escapeHtml(__('Enter country ID')) ?></label>
+            <div class="control">
+                <input type="text"
+                       id="country_id"
+                       name="country_id"
+                       class="text-input"
+                       data-validate='{"required": true}'
+                       placeholder="<?= $escaper-> escapeHtmlAttr(__('UA'))?>"
+                >
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action primary"><?= $escaper->escapeHtml(__('Get country')) ?></button>
+        </div>
+    </div>
+</form>
