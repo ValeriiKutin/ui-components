@@ -1,17 +1,23 @@
-define(['uiComponent', 'ko'], (uiComponent, ko) => {
+define(['uiCollection', 'uiLayout'], (uiCollection, uiLayout) => {
     'use strict';
 
-    return uiComponent.extend({
-        defaults:{
-            isActive: ko.observable(false),
+
+    return uiCollection.extend({
+        defaults: {
+            template: 'Vendor_Module/custom',
+            var1: 'var1',
+            var2: '${ $.var1}'
         },
 
-        initialize: function () {
+        initialize() {
             this._super();
-        },
 
-        toggleState() {
-            this.isActive(!this.isActive());
+            const $ = this;
+
+
+
+            console.log(`${$.var1}`);
+            console.log($.var2);
         }
-    })
-})
+    });
+});
