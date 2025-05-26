@@ -1,7 +1,6 @@
 <div data-bind="scope: 'custom-scope'">
-    <button data-bind="click: toggleState">Toggle state</button>
-    <!-- ko if: isActive -->
-        <div data-bind="mageInit: {'Vendor_Module/js/script': {}}">is active</div>
+    <!-- ko template: getTemplate() -->
+        Loading...
     <!-- /ko -->
 </div>
 
@@ -11,8 +10,13 @@
           "*": {
                "Magento_Ui/js/core/app": {
                     "components": {
-                        "custom-scope": {
-                            "component": "Vendor_Module/js/view/custom"
+                        "parent": {
+                            "component": "uiComponent",
+                            "children": {
+                                "child": {
+                                    "component": "uiComponent"
+                                }
+                            }
                         }
                     }
                 }
