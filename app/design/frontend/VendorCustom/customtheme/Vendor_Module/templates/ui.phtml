@@ -1,6 +1,8 @@
 <div data-bind="scope: 'custom-scope'">
-    <span data-bind="text: text"></span>
-    <div>awd</div>
+    <button data-bind="click: toggleState">Toggle state</button>
+    <!-- ko if: isActive -->
+        <div data-bind="mageInit: {'Vendor_Module/js/script': {}}">is active</div>
+    <!-- /ko -->
 </div>
 
 
