@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="custom.block" template="Vendor_Module::ui.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
+
+
+
+
+
+
+
+    <!--     <block name="custom.block"
+                template="Vendor_Module::parent.phtml"
+         >
+             <block name="custom.child.block" as="block" template="Vendor_Module::child.phtml"/>
+             <container name="custom.child.container" as="container" htmlTag="div" htmlClass="child-container">
+                 <block template="Vendor_Module::child.phtml"/>
+             </container>
+         </block>-->
+
