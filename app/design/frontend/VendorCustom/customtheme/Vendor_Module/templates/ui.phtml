@@ -1,22 +1,14 @@
-<div data-bind="scope: 'custom-scope'">
-    <!-- ko template: getTemplate() -->
-        Loading...
-    <!-- /ko -->
+<div data-bind="scope: 'custom'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
 </div>
-
 
 <script type="text/x-magento-init">
         {
           "*": {
                "Magento_Ui/js/core/app": {
                     "components": {
-                        "parent": {
-                            "component": "uiComponent",
-                            "children": {
-                                "child": {
-                                    "component": "uiComponent"
-                                }
-                            }
+                        "custom": {
+                            "component": "Vendor_Module/js/view/custom"
                         }
                     }
                 }
